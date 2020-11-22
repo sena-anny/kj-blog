@@ -208,7 +208,7 @@ class ContactForm extends React.Component {
         <Name
           name="name"
           type="text"
-          placeholder="Full Name"
+          placeholder="お名前"
           value={this.state.name}
           onChange={this.handleInputChange}
           required
@@ -233,8 +233,8 @@ class ContactForm extends React.Component {
 
         <Modal visible={this.state.showModal}>
           <p>
-            Thank you for reaching out. I will get back to you as soon as
-            possible.
+            ご連絡ありがとうございます。
+            メッセージを確認次第返答させていただきますので、数日ほどお待ちください。
           </p>
           <Button onClick={this.closeModal}>Okay</Button>
         </Modal>

@@ -17,9 +17,9 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'kj-blog',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+      '興味のあるWEB関連技術と趣味についてのブログです。',
     siteUrl: 'https://gcn.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
@@ -82,8 +82,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'GCN',
-        short_name: 'GCN',
+        name: 'kj-blog',
+        short_name: 'kj-blog',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',
