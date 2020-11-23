@@ -24,7 +24,7 @@ module.exports = {
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'Home',
+        name: 'kj-blog',
         slug: '/',
       },
       {

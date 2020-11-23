@@ -34,7 +34,6 @@ const Nav = styled.nav`
     color: DarkGray;
     font-weight: 600;
     transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.text};
     &:hover {
       color: white;
     }
@@ -51,13 +50,15 @@ const Menu = () => {
     <Header>
       <Nav>
         <ul>
-          {menuLinks.map(link => (
-            <li key={link.name}>
-              <Link to={link.slug} activeStyle={activeLinkStyle}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
+          {menuLinks.map(link => {
+            return (
+              <li key={link.name}>
+                <Link to={link.slug} activeStyle={activeLinkStyle}>
+                  {link.name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </Nav>
     </Header>
