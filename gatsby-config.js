@@ -18,8 +18,7 @@ try {
 module.exports = {
   siteMetadata: {
     title: 'kj-blog',
-    description:
-      '興味のあるWEB関連技術と趣味についてのブログです。',
+    description: '興味のあるWEB関連技術と趣味についてのブログです。',
     siteUrl: 'https://gcn.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
@@ -31,10 +30,10 @@ module.exports = {
         name: 'About',
         slug: '/about/',
       },
-      {
-        name: 'Contact',
-        slug: '/contact/',
-      },
+      // {
+      //   name: 'Contact',
+      //   slug: '/contact/',
+      // },
     ],
     postsPerFirstPage: 7,
     postsPerPage: 6,
