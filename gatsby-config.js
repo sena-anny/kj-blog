@@ -17,23 +17,19 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'kj-blog',
+    title: 'kj-tech blog',
     description: '興味のあるWEB関連技術と趣味についてのブログです。',
-    siteUrl: 'https://gcn.netlify.com',
+    siteUrl: 'https://kj-tech.net',
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'kj-blog',
+        name: 'kj-tech blog',
         slug: '/',
       },
       {
         name: 'About',
         slug: '/about/',
       },
-      // {
-      //   name: 'Contact',
-      //   slug: '/contact/',
-      // },
     ],
     postsPerFirstPage: 7,
     postsPerPage: 6,
@@ -81,8 +77,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'kj-blog',
-        short_name: 'kj-blog',
+        name: 'kj-tech blog',
+        short_name: 'kj-tech blog',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',

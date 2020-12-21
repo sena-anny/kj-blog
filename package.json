@@ -1,9 +1,9 @@
 {
   "name": "kj-blog",
-  "description": "A starter template to build amazing static websites with Gatsby, Contentful and Netlify",
-  "version": "2.1.3",
-  "repository": "https://github.com/ryanwiemer/gatsby-starter-gcn",
-  "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
+  "description": "kj-tech blog",
+  "version": "1.0.0",
+  "repository": "https://github.com/sena-anny/kj-blog",
+  "author": "kj",
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
