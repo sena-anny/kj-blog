@@ -9,7 +9,7 @@ import styled from '@emotion/styled'
 */
 
 const Form = styled.form`
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${(props) => props.theme.sizes.maxWidthCentered};
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -19,8 +19,8 @@ const Form = styled.form`
   textarea {
     font-family: inherit;
     font-size: inherit;
-    background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.tertiary};
+    color: ${(props) => props.theme.colors.text};
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
@@ -49,15 +49,15 @@ const Form = styled.form`
     left: 0;
     z-index: 1;
     transition: 0.2s all;
-    opacity: ${props => (props.overlay ? '.8' : '0')};
-    visibility: ${props => (props.overlay ? 'visible' : 'hidden')};
+    opacity: ${(props) => (props.overlay ? '.8' : '0')};
+    visibility: ${(props) => (props.overlay ? 'visible' : 'hidden')};
   }
 `
 
 const Name = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${(props) => props.theme.responsive.small}) {
     width: 49%;
   }
 `
@@ -65,7 +65,7 @@ const Name = styled.input`
 const Email = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: ${(props) => props.theme.responsive.small}) {
     width: 49%;
   }
 `
@@ -79,12 +79,12 @@ const Message = styled.textarea`
 `
 
 const Submit = styled.input`
-  background: ${props => props.theme.colors.text} !important;
+  background: ${(props) => props.theme.colors.text} !important;
   color: white !important;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    background: ${props => props.theme.colors.highlight} !important;
+    background: ${(props) => props.theme.colors.highlight} !important;
   }
 `
 
@@ -103,9 +103,9 @@ const Modal = styled.div`
   flex-flow: column;
   align-items: flex-start;
   transition: 0.2s all;
-  opacity: ${props => (props.visible ? '1' : '0')};
-  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+  opacity: ${(props) => (props.visible ? '1' : '0')};
+  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
+  @media screen and (min-width: ${(props) => props.theme.responsive.small}) {
     min-width: inherit;
     max-width: 400px;
   }
@@ -116,7 +116,7 @@ const Modal = styled.div`
 `
 
 const Button = styled.div`
-  background: ${props => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.text};
   font-size: 1em;
   display: inline-block;
   margin: 0 auto;
@@ -133,13 +133,13 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
-    background: ${props => props.theme.colors.highlight};
+    background: ${(props) => props.theme.colors.highlight};
   }
 `
 
-const encode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
@@ -154,7 +154,7 @@ class ContactForm extends React.Component {
     }
   }
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const target = event.target
     const value = target.value
     const name = target.name
@@ -163,14 +163,14 @@ class ContactForm extends React.Component {
     })
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(this.handleSuccess)
-      .catch(error => alert(error))
+      .catch((error) => alert(error))
     event.preventDefault()
   }
 

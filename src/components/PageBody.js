@@ -4,7 +4,7 @@ require('prismjs/themes/prism.css')
 
 const Body = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${(props) => props.theme.sizes.maxWidthCentered};
   h1,
   h2,
   h3 {
@@ -31,9 +31,9 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: ${(props) => props.theme.colors.highlight};
     }
   }
 
@@ -76,27 +76,27 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: ${(props) => props.theme.colors.secondary};
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid ${(props) => props.theme.colors.secondary};
     padding: 0 0 0 0.5em;
   }
 
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
+    background: ${(props) => props.theme.colors.secondary} !important;
     span {
       background: inherit !important;
     }
   }
 `
 
-const PageBody = props => {
+const PageBody = (props) => {
   return (
     <Body
       dangerouslySetInnerHTML={{ __html: props.body.childMarkdownRemark.html }}

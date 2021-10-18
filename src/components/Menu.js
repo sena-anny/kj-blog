@@ -4,13 +4,13 @@ import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary};
   width: 100%;
   padding: 1.5em 0;
 `
 const Nav = styled.nav`
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidth};
+  max-width: ${(props) => props.theme.sizes.maxWidth};
   margin: 0 auto;
   padding: 0 1.5em;
 
@@ -55,7 +55,7 @@ const Menu = () => {
     <Header>
       <Nav>
         <ul>
-          {menuLinks.map(link => {
+          {menuLinks.map((link) => {
             return (
               <li key={link.name}>
                 <Link to={link.slug} activeStyle={activeLinkStyle}>

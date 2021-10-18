@@ -12,16 +12,16 @@ const Box = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${(props) => props.theme.sizes.maxWidthCentered};
   a {
-    background: ${props => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.primary};
     color: white;
     padding: 1em;
     border-radius: 2px;
     text-decoration: none;
     transition: 0.2s;
     &:hover {
-      background: ${props => props.theme.colors.highlight};
+      background: ${(props) => props.theme.colors.highlight};
     }
   }
 `
@@ -36,7 +36,7 @@ const NextLink = styled(Link)`
   order: 2;
 `
 
-const PostLinks = props => {
+const PostLinks = (props) => {
   return (
     <Wrapper>
       <Box>

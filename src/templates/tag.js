@@ -14,7 +14,7 @@ const TagTemplate = ({ data, pageContext }) => {
   const posts = orderBy(
     data.contentfulTag.post,
     // eslint-disable-next-line
-    [object => new moment(object.publishDateISO)],
+    [(object) => new moment(object.publishDateISO)],
     ['desc']
   )
 
@@ -46,7 +46,7 @@ const TagTemplate = ({ data, pageContext }) => {
             &rdquo;
           </PageTitle>
           <CardList>
-            {posts.slice(skip, limit * humanPageNumber).map(post => (
+            {posts.slice(skip, limit * humanPageNumber).map((post) => (
               <Card {...post} key={post.id} basePath={basePath} />
             ))}
           </CardList>
@@ -58,7 +58,7 @@ const TagTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     contentfulTag(slug: { eq: $slug }) {
       title
       id

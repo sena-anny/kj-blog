@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const List = styled.ul`
   width: 100%;
   margin: 0 auto 1em auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${(props) => props.theme.sizes.maxWidthCentered};
 `
 
 const Tag = styled.li`
@@ -14,23 +14,23 @@ const Tag = styled.li`
   a {
     float: left;
     transition: 0.2s;
-    background: ${props => props.theme.colors.tertiary};
+    background: ${(props) => props.theme.colors.tertiary};
     padding: 0.5em;
     border-radius: 2px;
     text-transform: capitalize;
     text-decoration: none;
-    color: ${props => props.theme.colors.text};
-    border: 1px solid ${props => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.text};
+    border: 1px solid ${(props) => props.theme.colors.secondary};
     &:hover {
-      background: ${props => props.theme.colors.secondary};
+      background: ${(props) => props.theme.colors.secondary};
     }
   }
 `
 
-const TagList = props => {
+const TagList = (props) => {
   return (
     <List>
-      {props.tags.map(tag => (
+      {props.tags.map((tag) => (
         <Tag key={tag.id}>
           <Link to={`${props.basePath}/tag/${tag.slug}/`}>{tag.title}</Link>
         </Tag>
