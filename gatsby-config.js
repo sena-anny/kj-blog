@@ -40,7 +40,6 @@ module.exports = {
     'gatsby-plugin-theme-ui',
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,

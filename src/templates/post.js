@@ -19,7 +19,7 @@ const PostTemplate = ({ data, pageContext }) => {
 
   let ogImage
   try {
-    ogImage = heroImage.ogimg.src
+    ogImage = heroImage.fixed.src
   } catch (error) {
     ogImage = null
   }
@@ -68,10 +68,8 @@ export const query = graphql`
       }
       heroImage {
         title
-        fluid(maxWidth: 1800) {
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
-        ogimg: resize(width: 1800) {
+        gatsbyImageData(layout: FULL_WIDTH)
+        fixed {
           src
         }
       }
