@@ -94,6 +94,26 @@ const Body = styled.div`
       background: inherit !important;
     }
   }
+
+  table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 1em auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border: 1px solid ${(props) => props.theme.colors.secondary};
+
+    th {
+      background: ${(props) => props.theme.colors.secondary};
+      padding: 10px;
+      border-left-width: 0px;
+      border-top-width: 0px;
+    }
+    td {
+      border: 1px solid ${(props) => props.theme.colors.secondary};
+      padding: 10px;
+    }
+  }
 `
 
 const PageBody = (props) => {
